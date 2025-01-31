@@ -26,9 +26,12 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import carrent from "./brainwave.png";
+import jobit from "./doze.png";
+import tripguide from "./forever.png";
+import game from './game.png';
+import sydney from './sydney.png';
+import iphone from './iphone.png'
 
 export {
   logo,
@@ -59,4 +62,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  game,
+  sydney,
+  iphone,
 };
