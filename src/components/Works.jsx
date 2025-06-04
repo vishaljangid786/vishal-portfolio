@@ -17,7 +17,7 @@ const ProjectCard = ({
   live,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "string", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "string", index * 0.5, 0.75)} initial="hidden" animate="show">
       <Tilt
         options={{
           max: 45,
@@ -29,10 +29,10 @@ const ProjectCard = ({
           <img
             src={image}
             alt={name}
-            className="object-cover w-full h-full rounded-2xl"
+            className="object-center w-full h-full rounded-2xl"
           />
 
-          <div className="absolute inset-0 flex justify-end gap-3 m-3 card-img_hover">
+          <div className="absolute inset-0 flex justify-end gap-3 m-3 card-img_hover ">
             {source_code_link && (
               <div
                 onClick={() => window.open(source_code_link, "_blank")}
@@ -54,12 +54,12 @@ const ProjectCard = ({
           </div>
         </div>
 
-        <div className="mt-5">
+        <div className="mt-5 ">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
 
-        <div className="flex flex-wrap gap-2 mt-4">
+        <div className="flex flex-wrap gap-2 mt-4 ">
           {tags.map((tag) => (
             <p key={tag.name} className={`text-[14px] ${tag.color}`}>
               #{tag.name}
@@ -74,7 +74,11 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div
+        variants={textVariant(0)}
+        initial="hidden"
+        animate="show"
+        className="mb-8">
         <p className={styles.sectionSubText}>My work</p>
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
@@ -82,16 +86,18 @@ const Works = () => {
       <div className="flex w-full">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
+          initial="hidden"
+          animate="show"
           className="mt-3 text-secondary text-[17px] max-w-5xl leading-[30px]">
-          Following projects showcase my skills and experience through
+          Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos. It reflects my ability to
-          solve complex problems, work with different technologies, and manage
-          projects efficiently.
+          links to code repositories and live demos in it. It reflects my
+          ability to solve complex problems, work with diffrent technologies,
+          and manage projects effieciently.
         </motion.p>
       </div>
 
-      <div className="flex flex-wrap mt-20 gap-7">
+      <div className="flex flex-wrap justify-center mt-10 gap-7">
         {projects.map((project, index) => (
           <ProjectCard key={`project=${index}`} index={index} {...project} />
         ))}
@@ -100,4 +106,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "work");

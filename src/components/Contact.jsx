@@ -26,9 +26,10 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    // 4K4NskaqVN57E6QZc
-    // template_lno4esa
-    // service_dl9366p
+    if (!form.name || !form.email || !form.message) {
+      alert("Please fill out all fields before submitting.");
+      return;
+    }
 
     emailjs
       .send(
@@ -65,11 +66,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden ">
+    <div className="flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row ">
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[.75] bg-black-100 p-8 rounded-2xl"
-      >
+        className="flex-[.75] bg-black-100 p-8 rounded-2xl">
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
@@ -77,48 +77,46 @@ const Contact = () => {
           action=""
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
-        >
+          className="flex flex-col gap-8 mt-12">
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Name</span>
+            <span className="mb-4 font-medium text-white">Your Name</span>
             <input
               type="text "
               name="name"
               value={form.name}
               onChange={handleChange}
               placeholder="What's your name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="px-6 py-4 font-medium text-white border-none rounded-lg outline-none bg-tertiary placeholder:text-secondary"
             />
           </label>
 
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Email</span>
+            <span className="mb-4 font-medium text-white">Your Email</span>
             <input
               type="email "
               name="email"
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="px-6 py-4 font-medium text-white border-none rounded-lg outline-none bg-tertiary placeholder:text-secondary"
             />
           </label>
 
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Message</span>
+            <span className="mb-4 font-medium text-white">Your Message</span>
             <textarea
               rows="7"
               name="message"
               value={form.message}
               onChange={handleChange}
               placeholder="What do you want to say?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className="px-6 py-4 font-medium text-white border-none rounded-lg outline-none bg-tertiary placeholder:text-secondary"
             />
           </label>
 
           <button
             type="submit"
-            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
-          >
+            className="px-8 py-3 font-bold text-white shadow-md outline-none bg-tertiary w-fit shadow-primary rounded-xl">
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
@@ -126,8 +124,7 @@ const Contact = () => {
 
       <motion.div
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-        variants={slideIn("right", "tweeen", 0.2, 1)}
-      >
+        variants={slideIn("right", "tweeen", 0.2, 1)}>
         <EarthCanvas />
       </motion.div>
     </div>

@@ -28,10 +28,10 @@ import tesla from "./company/tesla.png";
 
 import carrent from "./brainwave.png";
 import jobit from "./doze.png";
-import tripguide from "./forever.png";
-import game from './game.png';
-import sydney from './sydney.png';
-import iphone from './iphone.png'
+import game from "./game.png";
+import iphone from "./iphone.png";
+import health from "./health.png";
+import tshirt from "./tshirt.png";
 
 export {
   logo,
@@ -61,8 +61,8 @@ export {
   tesla,
   carrent,
   jobit,
-  tripguide,
   game,
-  sydney,
   iphone,
+  health,
+  tshirt
 };

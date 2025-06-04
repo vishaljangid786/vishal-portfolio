@@ -21,11 +21,11 @@ import {
   shopify,
   carrent,
   jobit,
-  tripguide,
   threejs,
   game,
+  health,
   iphone,
-  sydney,
+  tshirt,
 } from "../assets";
 
 export const navLinks = [
@@ -201,6 +201,28 @@ const testimonials = [
 
 const projects = [
   {
+    name: "Portfolio Website",
+    description:
+      "A web-based application built using next js threejs interactive design framework for portfolio website",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "gsap",
+        color: "green-text-gradient",
+      },
+      {
+        name: "canvas",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: jobit,
+    source_code_link: "https://github.com/vishaljangid786/3d_portfolio",
+    live: "https://vishaljangid-portfolio.netlify.app/",
+  },
+  {
     name: "Brainwave",
     description:
       "An AI-powered platform with a modern design that allows users to perform tasks efficiently and enhances workflow.",
@@ -267,69 +289,88 @@ const projects = [
     live: "https://apple-ios-iphone15.netlify.app/",
   },
   {
-    name: "Sydney Ecommerce",
+    name: "Health Care Services",
     description:
-      " A sleek, modern e-commerce platform that offers users a smooth and intuitive shopping experience, specifically tailored for the Sydney market.",
+      "A dedicated web service that provides health information about your health and provides activities which is beneficiary and helpful ai experience too.",
     tags: [
       {
-        name: "nextjs",
+        name: "html",
         color: "blue-text-gradient",
-      },
-      {
-        name: "firebase",
-        color: "green-text-gradient",
       },
       {
         name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: sydney,
-    live: "https://shopify-purchase.netlify.app/",
-  },
-  {
-    name: "Doze Studio",
-    description:
-      "A web-based application built using GSAP and canvas animations, offering interactive features for creative web development.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "gsap",
         color: "green-text-gradient",
       },
       {
-        name: "canvas",
+        name: "chatbot",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    live: "https://doze-studio.netlify.app/",
+    image: health,
+    source_code_link: "https://github.com/vishaljangid786/health-care",
+    live: "https://healthcare-teamproject.netlify.app/",
   },
   {
-    name: "Ecommerce Forever",
+    name: "Watch Store",
     description:
-      "An intuitive e-commerce platform that allows users to explore and purchase products seamlessly with a smooth shopping experience.",
+      "A Service where user can see luxury and premium watches suitable for men and women which are specially customized as per user.",
     tags: [
       {
-        name: "nextjs",
+        name: "html",
         color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
       },
       {
         name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "chatbot",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    live: "https://forever-buy.netlify.app/",
+    image: tshirt,
+    source_code_link: "https://github.com/vishaljangid786/watch-store",
+    live: "https://t-shirt-sell.netlify.app/",
   },
 ];
+
+export const certificates = [
+  {
+    title: "Full Stack React E-commerce Project",
+    organization: "Great Stack",
+    image:
+      "https://res.cloudinary.com/djvxynk2f/image/upload/v1748530480/certificate_cgvqxj.png",
+    link: "https://res.cloudinary.com/djvxynk2f/image/upload/v1748530480/certificate_cgvqxj.png",
+  },
+  {
+    title: "1st Position in Inter College Competition",
+    organization: "Parishkar College of Global Excellence",
+    image:
+      "https://res.cloudinary.com/djvxynk2f/image/upload/v1748530504/Parishkar_college_inter_college_1st_position_fj9qoa.jpg",
+    link: "https://res.cloudinary.com/djvxynk2f/image/upload/v1748530504/Parishkar_college_inter_college_1st_position_fj9qoa.jpg",
+  },
+  {
+    title: "Spectra Hackathon 2024",
+    organization: "Parishkar College of Global Excellence",
+    image:
+      "https://res.cloudinary.com/djvxynk2f/image/upload/v1748530498/2nd_position_spectra_o3czal.jpg",
+    link: "https://res.cloudinary.com/djvxynk2f/image/upload/v1748530498/2nd_position_spectra_o3czal.jpg",
+  },
+  {
+    title: "Techkshitij 2024 Hackathon",
+    organization: "Kanoria P.G. Mahila Mahavidyalaya",
+    image:
+      "https://res.cloudinary.com/djvxynk2f/image/upload/v1748530619/Techshitiz_pxwcvz.jpg",
+    link: "https://res.cloudinary.com/djvxynk2f/image/upload/v1748530619/Techshitiz_pxwcvz.jpg",
+  },{
+    title: "Mern Stack Development",
+    organization: "30 dc",
+    image:
+      "https://res.cloudinary.com/djvxynk2f/image/upload/v1749006842/1724323663449-certificate_jwhwnt.jpg",
+    link: "https://res.cloudinary.com/djvxynk2f/image/upload/v1749006842/1724323663449-certificate_jwhwnt.jpg",
+  },
+];
+
 
 
 export { services, technologies, experiences, testimonials, projects };

@@ -15,7 +15,7 @@ const ExperienceCard=({experience})=>(
     date={experience.date}
     iconStyle={{background: experience.iconBg}}
     icon={
-      <div className="flex justify-center items-center w-full h-full " >
+      <div className="flex items-center justify-center w-full h-full " >
         <img src={experience.icon} alt={experience.comapany_name}  className="w-[60%] h-[60%] object-contain"/>
       </div>
     }
@@ -26,7 +26,7 @@ const ExperienceCard=({experience})=>(
         <p className="text-secondary text-[16px] font-semibold" style={{margin:0}} >{experience.comapany_name}</p>
     </div>
 
-    <ul className="mt-5 list-disc ml-5 space-y-2">
+    <ul className="mt-5 ml-5 space-y-2 list-disc">
       {experience.points.map((point,index)=>(
         <li key={`experience-point-${index}`}
           className="text-white-100 text-[14px] pl-1 tracking-wider"
@@ -44,20 +44,27 @@ const Experience = () => {
 
   return (
     <>
-      <motion.div variants={textVariant()}>
-      <p className={`${styles.sectionSubText} text-center`}>What I have done So far</p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>Work Experience.</h2>
+      <motion.div
+        variants={textVariant(0)}
+        initial="hidden"
+        animate="show">
+        <p className={`${styles.sectionSubText} text-center`}>
+          What I have done So far
+        </p>
+        <h2 className={`${styles.sectionHeadText} text-center`}>
+          Work Experience.
+        </h2>
       </motion.div>
 
-      <div className="mt-20 flex flex-col">
+      <div className="flex flex-col mt-20">
         <VerticalTimeline>
-          {experiences.map((experience,index)=>(
+          {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
           ))}
         </VerticalTimeline>
       </div>
     </>
-  )
+  );
 }
 
 export default SectionWrapper(Experience,'work');

@@ -7,6 +7,7 @@ import Experience from './Experience';
 import Works from './Works';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
+import Certificates from './Certificates.jsx';
 
 export {
   Hero,
@@ -16,6 +17,7 @@ export {
   Experience,
   Works,
   Feedbacks,
+  Certificates,
   Contact,
   EarthCanvas, 
   BallCanvas, 
