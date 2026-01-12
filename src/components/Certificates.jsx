@@ -24,9 +24,7 @@ const CertificateCard = ({ index, title, organization, image, link }) => {
 
   return (
     <motion.div
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      initial="hidden"
-      animate="show">
+      variants={fadeIn("up", "spring", 0.5 * index, 0.75)}>
       <Tilt
         options={{
           max: 25,
@@ -86,14 +84,14 @@ const Certificates = () => {
       <div className="flex w-full">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-5xl leading-[30px]">
+          className="mt-3 text-secondary text-[17px] leading-[30px]">
           Here are some certifications I’ve earned that demonstrate my
           dedication to continuous learning and skill development in various
           technologies and domains.
         </motion.p>
       </div>
 
-      <div className="flex flex-wrap mt-20 gap-7">
+      <div className="flex flex-wrap mt-20 gap-7 justify-center">
         {certificates.map((cert, index) => (
           <CertificateCard key={`cert-${index}`} index={index} {...cert} />
         ))}
@@ -102,4 +100,4 @@ const Certificates = () => {
   );
 };
 
-export default SectionWrapper(Certificates, "certificates");
+export default SectionWrapper(Certificates, "certi");

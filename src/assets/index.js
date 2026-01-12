@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./logo.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -32,6 +32,7 @@ import game from "./game.png";
 import iphone from "./iphone.png";
 import health from "./health.png";
 import tshirt from "./tshirt.png";
+import expo from './expo.png'
 
 export {
   logo,
@@ -47,6 +48,7 @@ export {
   figma,
   git,
   html,
+  expo,
   javascript,
   mongodb,
   nodejs,

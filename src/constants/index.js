@@ -26,16 +26,33 @@ import {
   health,
   iphone,
   tshirt,
+  expo
 } from "../assets";
 
-export const navLinks = [
+const navLinks = [
   {
     id: "about",
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "experience",
+    title: "Experience",
+  },
+  {
+    id: "skill",
+    title: "Key Skills",
+  },
+  {
+    id: "project",
+    title: "Projects",
+  },
+  {
+    id: "certi",
+    title: "Certificates",
+  },
+  {
+    id: "feed",
+    title: "Feedback",
   },
   {
     id: "contact",
@@ -82,6 +99,10 @@ const technologies = [
   {
     name: "React JS",
     icon: reactjs,
+  },
+  {
+    name: "Expo",
+    icon: expo,
   },
   {
     name: "Redux Toolkit",
@@ -172,30 +193,91 @@ const experiences = [
   },
 ];
 
+const counterItems = [
+  { value: 2, suffix: "+", label: "Years of Experience" },
+  { value: 20, suffix: "+", label: "Satisfied Clients" },
+  { value: 45, suffix: "+", label: "Completed Projects" },
+  { value: 95, suffix: "%", label: "Client Retention Rate" },
+];
+
+const logoIconsList = [
+  {
+    imgPath: "/images/logos/company-logo-1.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-2.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-3.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-4.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-5.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-6.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-7.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-8.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-9.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-10.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-11.png",
+  },
+];
+
 const testimonials = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    name: "Esther Howard",
+    mentions: "@estherhoward",
+    review:
+      "I can’t say enough good things about Vishal. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+    imgPath: "/images/client1.png",
   },
   {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    name: "Wade Warren",
+    mentions: "@wadewarren",
+    review:
+      "Working with Vishal was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+    imgPath: "/images/client3.png",
   },
   {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    name: "Guy Hawkins",
+    mentions: "@guyhawkins",
+    review:
+      "Collaborating with Vishal was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Vishal's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Vishal is the ideal partner.",
+    imgPath: "/images/client2.png",
+  },
+  {
+    name: "Marvin McKinney",
+    mentions: "@marvinmckinney",
+    review:
+      "Vishal was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
+    imgPath: "/images/client5.png",
+  },
+  {
+    name: "Floyd Miles",
+    mentions: "@floydmiles",
+    review:
+      "Vishal’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
+    imgPath: "/images/client4.png",
+  },
+  {
+    name: "Albert Flores",
+    mentions: "@albertflores",
+    review:
+      "Vishal was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
+    imgPath: "/images/client6.png",
   },
 ];
 
@@ -334,7 +416,7 @@ const projects = [
   },
 ];
 
-export const certificates = [
+const certificates = [
   {
     title: "Full Stack React E-commerce Project",
     organization: "Great Stack",
@@ -362,7 +444,8 @@ export const certificates = [
     image:
       "https://res.cloudinary.com/djvxynk2f/image/upload/v1748530619/Techshitiz_pxwcvz.jpg",
     link: "https://res.cloudinary.com/djvxynk2f/image/upload/v1748530619/Techshitiz_pxwcvz.jpg",
-  },{
+  },
+  {
     title: "Mern Stack Development",
     organization: "30 dc",
     image:
@@ -371,6 +454,14 @@ export const certificates = [
   },
 ];
 
-
-
-export { services, technologies, experiences, testimonials, projects };
+export {
+  certificates,
+  logoIconsList,
+  services,
+  technologies,
+  experiences,
+  testimonials,
+  projects,
+  counterItems,
+  navLinks,
+};
