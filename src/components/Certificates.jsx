@@ -50,7 +50,7 @@ const CertificateCard = ({ index, title, organization, image, link }) => {
           </div>
         </div>
 
-        <div className="flex justify-between mt-5">
+        <div className="flex justify-between mt-5 pb-10">
           <div>
             <h3 className="text-white font-bold text-[20px]">{title}</h3>
             <p className="mt-1 text-secondary text-[14px]">

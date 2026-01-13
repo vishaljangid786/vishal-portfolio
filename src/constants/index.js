@@ -418,14 +418,14 @@ const projects = [
 
 const certificates = [
   {
-    title: "Full Stack React E-commerce Project",
+    title: "Full Stack E-commerce Project",
     organization: "Great Stack",
     image:
       "https://res.cloudinary.com/djvxynk2f/image/upload/v1748530480/certificate_cgvqxj.png",
     link: "https://res.cloudinary.com/djvxynk2f/image/upload/v1748530480/certificate_cgvqxj.png",
   },
   {
-    title: "1st Position in Inter College Competition",
+    title: "Inter College Competition",
     organization: "Parishkar College of Global Excellence",
     image:
       "https://res.cloudinary.com/djvxynk2f/image/upload/v1748530504/Parishkar_college_inter_college_1st_position_fj9qoa.jpg",
