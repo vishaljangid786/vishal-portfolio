@@ -9,9 +9,7 @@ import { styles } from "../styles";
 const Tech = () => {
   return (
     <>
-      <motion.div
-        variants={textVariant()}
-        className="mb-10">
+      <motion.div variants={textVariant()} className="mb-10">
         <p className={`${styles.sectionSubText}`}>What I Bring to the Table</p>
         <h2 className={`${styles.sectionHeadText}`}>Key Skils</h2>
       </motion.div>

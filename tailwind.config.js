@@ -4,6 +4,9 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
+      screens: {
+        "xl-1245": "1246px",
+      },
       colors: {
         primary: "#050816",
         secondary: "#aaa6c3",
@@ -19,6 +22,9 @@ module.exports = {
       },
       screens: {
         xs: "450px",
+        "xl-1245": "1246px",
+        "xl-600": "600px",
+        "xl-720": "720px",
       },
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",

@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+// import { ComputersCanvas } from "./canvas";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { fadeIn, textVariant } from "../utils/motion";
 
 gsap.registerPlugin(useGSAP);
@@ -19,6 +19,13 @@ const words = [
 
 const Hero = () => {
   const heroRef = useRef(null);
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   useGSAP(
     () => {
       const items = gsap.utils.toArray(".wrapper > span");
@@ -68,8 +75,9 @@ const Hero = () => {
   };
 
   return (
-    <section ref={heroRef} className="relative w-full h-screen mx-auto">
+    <section className="relative w-full h-screen mx-auto overflow-hidden">
       <div
+        ref={heroRef}
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex gap-5`}>
         <div className="flex flex-col items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#015eff]" />
@@ -112,12 +120,56 @@ const Hero = () => {
             {/* Line 3 */}
             <motion.h1 variants={itemUp}>that Deliver Results</motion.h1>
           </div>
+          <motion.p
+            variants={itemUp}
+            className="mt-6 max-w-xl  xl-720:hidden  text-secondary text-[16px] md:text-[18px] leading-relaxed">
+            I build modern, scalable web experiences that combine clean design,
+            smooth interactions, and strong performance — turning ideas into
+            products people actually love to use.
+          </motion.p>
         </motion.div>
       </div>
+      <img
+        src="/images/hero.png"
+        alt=""
+        className="
+    absolute 
+    bottom-10 sm:bottom-16 lg:bottom-20
+    left-1/2 lg:left-2/3
+    -translate-x-1/2
 
-      <div className="absolute inset-0 top-0 left-0 w-full h-full">
-        <ComputersCanvas />
-      </div>
+    w-[85vw]
+    sm:w-[500px]
+    md:w-[600px]
+    lg:w-[700px]
+    xl:w-[800px]
+
+    max-w-[90vw]
+    rounded-2xl
+    brightness-50
+    pointer-events-none
+  "
+        style={{
+          WebkitMaskImage: `
+      linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 8%,
+        black 92%,
+        transparent 100%
+      ),
+      linear-gradient(
+        to right,
+        transparent 0%,
+        black 8%,
+        black 92%,
+        transparent 100%
+      )
+    `,
+          WebkitMaskComposite: "destination-in",
+          maskComposite: "intersect",
+        }}
+      />
 
       <a
         href="#about"
